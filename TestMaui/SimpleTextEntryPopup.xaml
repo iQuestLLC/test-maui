@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="TestMaui.SimpleTextEntryPopup"
+             Color="{StaticResource White}"
+             Size="350,300">
+    <Grid
+        RowDefinitions="50,20,40,40"
+        RowSpacing="10"
+        Padding="20">
+
+        <!-- 0: Popup Title -->
+        <Label
+            Grid.Row="0"
+            x:Name="TitleLabel"
+            TextColor="{StaticResource Gray600}"
+            FontFamily="CenturyGothicRegular"
+            FontSize="16"
+            FontAttributes="Bold"
+            CharacterSpacing="1.1"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Start" />
+
+        <!-- 1: Entry Label -->
+        <Label
+            Grid.Row="1"
+            x:Name="EntryLabel"
+            TextColor="{StaticResource Gray600}"
+            FontFamily="CenturyGothicRegular"
+            FontAttributes="Bold"
+            FontSize="13"
+            CharacterSpacing="1.1" />
+
+        <!-- 2: Entry -->
+        <Border
+            Grid.Row="2"
+            BackgroundColor="{StaticResource White}"
+            Stroke="{StaticResource UIMidGray}"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 5">
+            <Entry
+                x:Name="StringEntry"
+                TextColor="{StaticResource Gray900}"
+                BackgroundColor="{StaticResource FormElementBackground}"
+                FontSize="13"
+                FontAttributes="Bold" />
+        </Border>
+
+        <!-- 3: Submit Button -->
+        <Button
+            Grid.Row="3"
+            Text="Submit"
+            Clicked="Button_Clicked"
+            WidthRequest="150"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+    </Grid>
+</mct:Popup>
