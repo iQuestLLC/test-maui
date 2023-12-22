@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+           xmlns:item="clr-namespace:TestMaui"
+           x:Class="TestMaui.SimpleListPopup"
+           Color="{StaticResource White}"
+           Size="350,300">
+
+    <Grid
+        RowDefinitions="30,*">
+
+        <!-- 0: Popup Title -->
+        <Label
+            Grid.Row="0"
+            Text="Fruits List"
+            TextColor="{StaticResource Gray600}"
+            FontSize="14"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center" />
+
+        <!-- 1: Fruits Collection -->
+        <CollectionView
+            Grid.Row="1"
+            x:Name="FruitsCollection"
+            HorizontalOptions="Center"
+            VerticalOptions="Fill">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Vertical"
+                    ItemSpacing="5"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="item:Fruit">
+                    <Border
+                        BackgroundColor="{StaticResource Gray100}"
+                        ClassId="{Binding Id}"
+                        StrokeShape="RoundRectangle 5"
+                        StrokeThickness="0"
+                        Padding="20"
+					    HorizontalOptions="Fill">
+                        <Label
+                            Text="{Binding Name}"
+                            TextColor="{StaticResource Gray600}"
+                            FontSize="12"
+                            FontAttributes="Bold"
+                            CharacterSpacing="1.2"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="Fill"/>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+    
+</mct:Popup>

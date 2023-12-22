@@ -6,7 +6,7 @@
              Color="{StaticResource White}"
              Size="350,300">
     <Grid
-        RowDefinitions="50,20,40,40"
+        RowDefinitions="50,20,40,*"
         RowSpacing="10"
         Padding="20">
 
