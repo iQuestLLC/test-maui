@@ -35,7 +35,6 @@
                     x:DataType="item:Fruit">
                     <Border
                         BackgroundColor="{StaticResource Gray100}"
-                        ClassId="{Binding Id}"
                         StrokeShape="RoundRectangle 5"
                         StrokeThickness="0"
                         Padding="20"
