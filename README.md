@@ -12,4 +12,4 @@ Second issue: On Android, any Label placed inside Popup doesn't show anything
 
 
 ## License
-Private
+MIT
